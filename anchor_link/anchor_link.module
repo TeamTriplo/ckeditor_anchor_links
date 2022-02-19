@@ -1,0 +1,23 @@
+<?php
+/**
+ * Implements hook_ckeditor_plugin().
+ *
+ * @return type
+ */
+function anchor_link_ckeditor_plugins() {
+    $plugins['anchor_link'] = array(
+        'path' => backdrop_get_path('module', 'anchor_link') . '/plugins',
+        'file' => 'plugin.js',
+        'internal' => FALSE,
+        'buttons' => array(
+            'Anchor' => array(
+                'label' => t('Anchor Link'),
+                'image' => base_path() . backdrop_get_path('module', 'anchor_link') . '/plugins/icons/anchor_link.png',
+                'image_alternative' =>'{insert anchor_link}',
+            ),
+        ),
+    );
+//    echo '<pre>';
+//    print_r($plugins); die;
+    return $plugins;
+}

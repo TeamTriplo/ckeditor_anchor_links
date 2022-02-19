@@ -1,0 +1,7 @@
+name        = Anchor Link
+description = "Allow to insert anchor link in ckeditor."
+backdrop = 1.x
+type = module
+package     = User interface
+dependencies[] = ckeditor
+
